@@ -1,0 +1,37 @@
+
+//arquivo para enviar solicitaçoes (corpo) http de maneira interativa
+//e testar api utilizando a extençao rest Client
+
+POST http://localhost:3333/events
+Content-Type: application/json 
+
+{
+    "title": "evento",
+    "details": null, 
+    "maximumAttendees": 3
+}
+
+### 
+
+POST http://localhost:3333/events/49aaba06-2544-412e-83be-7f8503859c52/attendees
+Content-Type: application/json 
+
+{
+    "name": "igor dos reis alvares",
+    "email": "igalvesreis21212@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/49aaba06-2544-412e-83be-7f8503859c52
+
+### 
+
+GET http://localhost:3333/attendees/12/badge
+### 
+
+GET http://localhost:3333/attendees/12/check-in
+
+###
+
+GET http://localhost:3333/events/49aaba06-2544-412e-83be-7f8503859c52/attendees?query=val
